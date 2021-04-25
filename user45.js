@@ -462,7 +462,6 @@ app.post('/uploadmultiple', upload.array('myFiles', 12), (req, res, next) => {
   // Handle 404 error.
 // The last middleware.
 app.use("*",function(req,res){
-    res.sendFile(__dirname + "/express/404.html");;
+    res.sendFile(__dirname + "/express/404.html");
     });
-
-app.listen(3000);
+app.listen(process.env.PORT || 3000)
