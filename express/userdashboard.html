@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../CSS/userstyle.css">
+
+    </head>
+<body>
+<h1 style="color:white" align="center">Login</h2>
+
+<center>
+  <form name="myForm" action="/userdashboard" onsubmit="return validateForm()" method="POST">
+    
+    <div class="container" id="label">
+      <label for="name"><b>Username:</b></label>
+	  <br>
+	  <br>
+      <input value="" type="text" placeholder="Enter Name username" name="username" >
+	  <br>
+	  <br>
+		<label value="" for="password"><b>Password:</b></label>
+		<br>
+	  <br>
+      <input type="password" placeholder="Enter your password" name="password" required> 
+      <a class="linkd" href="registerform.html">Create new account</a>
+  <br>
+        <br>
+        
+        <p><input type="checkbox" name="remember" /> Remember me
+	</p>
+	  <center>
+        <button type="submit" class="signupbtn" name="login">Login</button>
+		</center>
+      </div>
+    </div>
+  </form>
+  {{#if message}}
+  <div class="alert {{messageClass}}" role="alert">
+      {{message}}
+  </div>
+{{/if}}
+</div>
+</center>
+</body>
+</html>
+
+

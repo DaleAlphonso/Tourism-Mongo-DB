@@ -1,0 +1,171 @@
+<div class="wrapper">
+    <header class="imag">
+       <nav>
+          <!-- <div class="menu-icon">
+             <i class="fa fa-bars fa-2x"></i>
+          </div> -->
+          <div class="logo">
+               TRAVAL
+          </div>
+          <div class="menu">
+             <ul>
+                 <li><button type="button" class="btn btn-primary" action="http://localhost:3000/read" method="GET">Check Users</button></li>
+             <li><a href="/home" name="login">HOME</a></li>
+            <li class="dropdown">
+   <a href="../Without_reg/temp.html"> WORLD</a>
+   
+ </li>
+       <li><a href="/login" name="login">LOGIN</a></li>
+       <li><a href="/blogs" name="blogs">BLOGS</a></li>   
+             </ul>
+          </div>
+ </nav>
+       <!-- <div class="caption">
+         "Travel to make memories<br>all around the world"
+    </div> -->
+    </header>
+    
+ </div>
+
+ <section class="tm-container-outer tm-bg-gray">            
+           <div class="container">
+               <div class="row">
+                   <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">                        
+                       <h2 class="text-uppercase mb-4">Your <strong>Journey</strong> is our priority</h2>
+                       <p class="mb-4">Nullam auctor, sapien sit amet lacinia euismod, lorem magna lobortis massa, in tincidunt mi metus quis lectus. Duis nec lobortis velit. Vivamus id magna vulputate, tempor ante eget, tempus augue. Maecenas ultricies neque magna.</p>
+                       <a href="#" class="text-uppercase btn-primary tm-btn">Continue explore</a>                              
+                   </div>
+               </div>
+           </div>            
+       </section>
+
+    
+ <div class="copywrite-area">
+       <div class="container">
+           <div class="row">
+               <!-- Copywrite Text -->
+               <div class="col-12 col-sm-6">
+                   <p class="copywrite-text" style="color:gray; font-size:16px; margin-top:10px;">
+                   Copyright &copy 2021 All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="index.html">Traval</a></p>
+                   <!-- <img src="https://img.icons8.com/fluent/48/fa314a/facebook-new.png"/>
+                   <img src="https://img.icons8.com/fluent/48/fa314a/facebook-new.png"/>
+                   <p class="copywrite-text" style="color:gray; font-size:16px; text-align:right;">
+                 -->
+               </div>
+               <div class="col-12 col-sm-6" style="text-align:right;">
+               <a href="https://www.facebook.com/" ><img src="https://img.icons8.com/fluent/25/fa314a/facebook-new.png"/></a>
+               <a style="margin-left:50px;" href="https://www.instagram.com/"><img src="https://img.icons8.com/fluent/25/000000/instagram-new.png"/></a>
+               <a style="margin-left:50px;" href="https://www.twitter.com/"><img src="https://img.icons8.com/fluent/25/000000/twitter.png"/></a>
+               <a style="margin-left:50px;" href="rss.php"><img src="https://img.icons8.com/color/25/000000/rss.png"/></i></a>
+               </div>
+           </div>
+       </div>
+   </div>
+   <script>
+
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    
+    function sendGetRequest(){
+    
+        var csrf_token = getCookie('csrftoken');
+    
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function (){
+            var myData = JSON.parse(this.responseText);
+            alert(myData["my_name"]);
+        }
+    
+        // xhttp.open('GET','/collector/test',true);
+    
+        xhttp.open('POST','/collector/test/',true);
+        xhttp.setRequestHeader('X-CSRFToken',csrf_token);
+        xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+        xhttp.send('movie=justice_league&director=zack snyder');
+    }
+    
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = 'https://www.nintendolife.com/feeds/latest'
+    
+    //fetch(proxyUrl+targetUrl)
+    fetch('https://www.nintendolife.com/feeds/latest')
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+            alert(data);
+            console.log(data)
+            const items = data.querySelectorAll("item");
+    
+        items.forEach(el =>{
+    
+            // creating href
+            var newsLink = document.createElement("a");
+            newsLink.className = "list-group-item list-group-item-action flex-column align-items-start";
+            newsLink.href = el.querySelector("link").innerHTML
+    
+            // creating div inside to put
+            var insideDiv = document.createElement("div");
+            insideDiv.className = "w-100 justify-content-between";
+    
+            // creating header file
+            var newsHeader = document.createElement("h5");
+            newsHeader.className = "mb-1";
+            newsHeader.innerHTML = el.querySelector("title").innerHTML;
+    
+            // creating header file
+            var imgPart = document.createElement("img");
+            imgPart.className = "img-fluid float-left";
+            imgPart.src = el.getElementsByTagName("media:thumbnail")[0].getAttribute("url");
+    
+            insideDiv.appendChild(newsHeader);
+            insideDiv.appendChild(imgPart);
+            newsLink.appendChild(insideDiv);
+    
+    
+            var divList = document.getElementById("list_for_news");
+            divList.appendChild(newsLink);
+    
+    
+            //console.log(el.querySelector("title").innerHTML);
+            var thumb = el.getElementsByTagName("media:thumbnail");
+            //var temp = thumb.i
+            //console.log(thumb[0].getAttribute("url"));
+    
+        });
+    });
+    
+    
+    
+    
+    
+    function myFunction() {
+      var x = document.getElementById("id1");
+      x.style.visibility = "visible";
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    
+    function onLoad() {
+        var x = document.getElementById("id1");
+        x.style.visibility = "hidden";
+    }
+    </script>
+    

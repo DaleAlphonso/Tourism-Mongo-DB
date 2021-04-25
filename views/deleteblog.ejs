@@ -1,0 +1,142 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../CSS/userstyle.css">
+<style>
+  body {
+font-family: 'Roboto Condensed', sans-serif;
+}
+* {box-sizing: border-box;}
+
+input[type=text]{
+user-select: text;
+z-index:100;
+height:10%;
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+color: black;
+}
+
+body{        
+
+padding-bottom: 50px;
+background: url("../IMAGES/signup.jpg") ;
+}
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+border-radius: 3%;
+width: 100%;
+opacity: 0.9;
+}
+#post_title
+{
+text-align: left;
+color:#f1f1f1;
+}
+
+
+/* .btn-outline-primary, .btn-outline-danger {
+float: center;
+width: 50%;
+} */
+#post_title
+{
+text-align: left;
+color:black;
+}
+
+/* Add padding to container elements */
+.container {
+
+width: 40%;
+padding: 40px;
+background-color: rgba(0,0,0,0.5);
+height: 80%;
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 200px) {
+.cancelbtn, .signupbtn {
+width: 100%;
+}
+}
+.linkd{
+font-size: 18px;
+text-decoration-line: none;
+color:azure;
+}
+
+  </style>
+  </head>
+<!-- <div class="container">
+    <h1>Do You really Want to delete this Blog?</h1>
+    <form action="/delete/" method="POST">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Blog Title</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="post_title"
+          value="<%= records.post_title %>"
+          placeholder="Post Title"
+          name="post_title"
+        />
+      </div>
+
+      <input type="submit" class="btn btn-outline-danger" value="Delete" />
+    </form>
+    <br>
+    <a href="/" class="btn btn-outline-primary">No, dont want to</a>
+  </div> -->
+
+
+  <h1 style="color:white" align="center">Do You really Want to delete this Blog?</h1>
+
+    <center>
+      <div id="viewport"></div>
+      <form name="myForm" action="/delete/" method="POST">
+        
+        <div class="container" id="label">
+          <label for="name"><b>Blog Title</b></label>
+        <br>
+        <br>
+        <input
+        type="text"
+        class="form-control"
+        id="post_title"
+        value="<%= records.post_title %>"
+        placeholder="Post Title"
+        name="post_title"
+      />
+         
+        <br>
+        
+        <center>
+          <button type="submit" class="btn btn-outline-primary" value="Delete">Delete</button>
+            
+        </center>
+        <br>
+        <br>
+        <a href="/blog"><button  class="btn btn-outline-primary" >Cancel</button></a>
+   
+          </div>
+        </div>
+      </form>
+    
+    </div>
+    </center>

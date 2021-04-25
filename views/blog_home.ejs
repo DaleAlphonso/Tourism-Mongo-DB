@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Site Metas -->
+    <title>Travals Blogs</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> 
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../static/Bootstrap/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/mainstyle.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">     
+    <!-- FontAwesome Icons core CSS -->
+    <!-- <link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="../static/CSS/style.css" rel="stylesheet"> -->
+    
+    
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+    body{
+        background-color: rgb(245, 236, 236)
+}
+</style>
+</head>
+<body>
+<div>
+    <div class="wrapper">
+        <header>
+           <nav>
+              <!-- <div class="menu-icon">
+                 <i class="fa fa-bars fa-2x"></i>
+              </div> -->
+              <div class="logo" style="color: black; position: relative;">
+                   TRAVAL
+              </div>
+              <div class="menu">
+                 <ul>
+                     <li><button type="button" class="btn btn-primary" action="http://localhost:3000/read" method="GET">Check Users</button></li>
+                 <li><a href="/" name="login" style="color: black;">HOME</a></li>
+                <li class="dropdown">
+       <a href="../package/temp.html" style="color: black;"> WORLD</a>
+       
+     </li>
+           <li><a href="/login" name="login" style="color: black;">LOGIN</a></li>
+           <li><a href="/blogs" name="login" style="color: black;">BLOGS</a></li>   
+                 </ul>
+              </div>
+     </nav>
+           <!-- <div class="caption">
+             "Travel to make memories<br>all around the world"
+        </div> -->
+        </header>
+        
+     </div>
+
+    <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder; color: black;"> <b>BLOGS </b></h1>
+   <h2 style="text-align: center; color: black;">Share your experience with TRAVALS by clicking on the New Post given below</h2>
+   <h2 style="text-align: center;"><button class="btn btn-primary"><a  style="color: black; font-weight: bold; font-size: 20px;" class="nav-link" href="/new_discussion">New Post</a></button></h2>
+
+    <hr  style="border-top-color: black; border-top-width: 5px;">
+    <h3 style="text-align: center;  color: black; font-family: Georgia, 'Times New Roman', Times, serif;"> <b>Experience Shared by Our Customers !</b></h3>
+</div>
+    
+        
+  
+
+   
+        <!-- Dynamically generated code from the database -->
+
+        <!-- Dynamically generated code from the database ends here: -->
+
+
+        <section class="section wb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-list clearfix">
+
+                                <% records.forEach(function(row){ %>
+
+                                <!-- below this is a single post -->
+                                <div class="blog-box row" >
+                                    <div class="col-md-4" >
+                                        <div class="post-media" style="text-align: center; color: black; font-weight: bold;">
+                                            <a href="gamezone-comments.html" title="">
+                                                
+                                                
+                                            </a>
+                                        </div><!-- end media -->
+                                    </div><!-- end col -->
+
+                                    <div class="blog-meta big-meta col-md-8" style="text-align: center;  border: black;  color: black; font-weight: bold; font-family: 'Times New Roman', Times, serif;">
+                                       
+                                        <h3 style="text-align: center; color: black; font-weight: bold; "><a style="color: black;" href="/dy_detail/<%= row._id %>" title=""> <%= row.post_title %> </a></h3>
+                                        <p style="font-weight: normal; font-size: 20px;"> <%= row.post_description %> </p>
+                                       
+                                        <button  type="button" class="btn btn-info"><a href="/update/<%= row._id %>" title="" style="color: black; font-size: medium; font-weight: bold;">Edit</a></button>
+                                        <button  type="button" class="btn btn-danger"><a href="/deleteu/<%= row._id %>" title="" style="color: black; font-size: medium; font-weight: bold;">Delete</a></button>
+
+                                        <hr  style="border-top-color: black; border-top-width: 5px;">
+                                         <!-- above this is a single post -->
+                                    </div><!-- end meta -->
+
+                                </div><!-- end blog-box -->
+
+                                <!-- <hr  style="border-top-color: black; border-top-width: 5px;"> -->
+                                <!-- above this is a single post -->
+
+                                <% }) %>
+
+
+                            </div><!-- end blog-list -->
+                        </div><!-- end page-wrapper -->
+
+                    </div><!-- end col -->
+
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        
+
+        
+        
+    </div><!-- end wrapper -->
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+
+<script>
+
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+
+function sendGetRequest(){
+
+    var csrf_token = getCookie('csrftoken');
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (){
+        var myData = JSON.parse(this.responseText);
+        alert(myData["my_name"]);
+    }
+
+    // xhttp.open('GET','/collector/test',true);
+
+    xhttp.open('POST','/collector/test/',true);
+    xhttp.setRequestHeader('X-CSRFToken',csrf_token);
+    xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xhttp.send('movie=justice_league&director=zack snyder');
+}
+
+// var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+// targetUrl = 'https://www.nintendolife.com/feeds/latest'
+
+// //fetch(proxyUrl+targetUrl)
+// fetch('https://www.nintendolife.com/feeds/latest')
+//     .then(response => response.text())
+//     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+//     .then(data => {
+//         alert(data);
+//         console.log(data)
+//         const items = data.querySelectorAll("item");
+
+//     items.forEach(el =>{
+
+//         // creating href
+//         var newsLink = document.createElement("a");
+//         newsLink.className = "list-group-item list-group-item-action flex-column align-items-start";
+//         newsLink.href = el.querySelector("link").innerHTML
+
+//         // creating div inside to put
+//         var insideDiv = document.createElement("div");
+//         insideDiv.className = "w-100 justify-content-between";
+
+//         // creating header file
+//         var newsHeader = document.createElement("h5");
+//         newsHeader.className = "mb-1";
+//         newsHeader.innerHTML = el.querySelector("title").innerHTML;
+
+//         // creating header file
+//         var imgPart = document.createElement("img");
+//         imgPart.className = "img-fluid float-left";
+//         imgPart.src = el.getElementsByTagName("media:thumbnail")[0].getAttribute("url");
+
+//         insideDiv.appendChild(newsHeader);
+//         insideDiv.appendChild(imgPart);
+//         newsLink.appendChild(insideDiv);
+
+
+//         var divList = document.getElementById("list_for_news");
+//         divList.appendChild(newsLink);
+
+
+//         //console.log(el.querySelector("title").innerHTML);
+//         var thumb = el.getElementsByTagName("media:thumbnail");
+//         //var temp = thumb.i
+//         //console.log(thumb[0].getAttribute("url"));
+
+//     });
+// });
+
+
+
+
+
+function myFunction() {
+  var x = document.getElementById("id1");
+  x.style.visibility = "visible";
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function onLoad() {
+    var x = document.getElementById("id1");
+    x.style.visibility = "hidden";
+}
+</script>
+
+</body>
+</html>

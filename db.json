@@ -1,0 +1,54 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "fname": "Valen",
+        "lname": "Alphonso",
+        "email": "valen@gmail.com",
+        "phone": "99876543210",
+        "age": "22",
+        "gender": "Female",
+        "address": "Vashi"
+      },
+      {
+        "id": 2,
+        "fname": "Prachi",
+        "lname": "Pradhan",
+        "email": "prachi@gmail.com",
+        "phone": "9832143210",
+        "age": "18",
+        "gender": "Female",
+        "address": "Lower Parel"
+      },
+      {
+        "id": 3,
+        "fname": "Sandhya",
+        "lname": "Patil",
+        "email": "sandhya@gmail.com",
+        "phone": "9898762537",
+        "age": "30",
+        "gender": "Female",
+        "address": "Santacruz"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    },
+    "ping": {
+      "result": "ping"
+    }
+  }

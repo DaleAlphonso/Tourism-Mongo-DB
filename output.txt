@@ -1,0 +1,11 @@
+[{"firstname":"Dale","lastname":"Alphonso","email":"sdfghj@dfg.vom","phone":"1234567890","sex":"female","add":"fjfjhfj","age":"43","password":"fgf","submit":""},{"firstname":"Prachi","lastname":"Pradhan","email":"hgdhhg@jhgshd.com","phone":"0987654321","sex":"Male","add":"udfhskjhfjk","age":"54","password":"hgjghj","submit":""},{"firstname":"Sandhya","lastname":"Pachupate","email":"sandhya@gmail.com","phone":"1234567890","sex":"female","add":"asdfg","age":"76","password":"gfgjfj","submit":""}]
+[{"firstname":"Vidhi","lastname":"asdfghj","email":"dfghj@dfghjk.com","phone":"98765432","sex":"female","add":"dfghjk","age":"65","password":"yfgjhfj","submit":""}]
+[{"firstname":"Nupur","lastname":"Kawde","email":"nupu@gmail.com","phone":"9876543210","sex":"female","add":"Vashi","age":"27","password":"1234","submit":""}]
+[{"firstname":"gfdhfhjagd","lastname":"lkhlkdfhsklfh","email":"fhdskjhj@kjfsbsa.com","phone":"123456789","sex":"Male","add":"hvjvhjvj","age":"32","password":"123","cpassword":"123","submit":""}]
+[{},{"email":"sam@gmail.com","phone":"9876543210","sex":"Male","password":"s6jg4fmrG/46NvIx9nb3i7MKUZ0rIebFMMDu6Ou0pdA="}]
+
+[{},{"email":"sam19@gmail.com","phone":"9876543210","sex":"female","password":"zr49nWFLpcGfYzVmEEMVhUoRNTozO/lvFrWvoOkKvcQ="}]
+
+[{},{"firstname":"Pratiksha","lastname":"Jadhav","email":"pratiksha123@gmail.com","phone":"9876543210","sex":"female","age":"21","password":"ZhYuisN0acAwDUFpj0qQWBZbXCR/75WdusUbuOhH5fQ="}]
+[{},{"firstname":"Akshaya","lastname":"Jadhav","email":"akshu@gmail.com","phone":"9619405432","sex":"female","age":"27","password":"HUfSs4dR5BWAZQJAgCBfYM3kVVzny36Brs3RSM+v9qQ="}]
+[{},{"firstname":"Tanushka","lastname":"Chavan","email":"tanushka@gmail.com","phone":"987654320","sex":"female","age":"21","password":"ahoF+VRNuXIaRW4Odr8PcTMrznkYns3zegGnTNK2lXM="}]
